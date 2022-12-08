@@ -54,6 +54,7 @@ def download_tgz(folder_url):
     tgz_url = folder_url + "/FullNode_output-directory.tgz"
     logger.warning("start downloading " + tgz_url)
     urllib.request.urlretrieve(tgz_url, "FullNode_output-directory.tgz", reporthook=download_hook)
+    logger.warning("sdownloaded")
 
 def uncompress_tgz(md5=None):
     block_size=1<<20
@@ -76,7 +77,9 @@ def uncompress_tgz(md5=None):
     logger.warning("uncompressed output-directory")
 
 def download_jar():
+    logger.warning("start downloading FullNode.jar")
     urllib.request.urlretrieve("https://github.com/tronprotocol/java-tron/releases/latest/download/FullNode.jar", "FullNode.jar", reporthook=download_hook)
+    logger.warning("sdownloaded")
 
 if __name__=='__main__':
     logger.info("downloader starting")
