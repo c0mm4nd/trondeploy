@@ -98,3 +98,4 @@ if __name__=='__main__':
             download_tgz(url)
             md5 = get_latest_md5(url)
         uncompress_tgz(md5)
+    logger.warning("everything done, exit downloader")
