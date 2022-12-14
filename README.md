@@ -32,3 +32,5 @@ Files & Folders:
 | /tron/FullNode.jar | fullnode executable file |
 | /tron/main_net_config.conf | the configuration |
 | /tron/start.sh | entry of the container | 
+
+Highly suggest use [docker volume](https://docs.docker.com/storage/volumes/) mounting `/tron` or just `/tron/output-directory` to avoid data loss when restarting container.
