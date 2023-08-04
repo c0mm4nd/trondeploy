@@ -1,8 +1,7 @@
 name: trondeploy
 on:
   push:
-  schedule:
-    - cron: "0 * * * 1"
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
